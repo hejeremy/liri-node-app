@@ -5,6 +5,7 @@
  * Last Edited: 7-26-2017
  */
 
+//Grabs keys from keys.js
 var keys = require('./keys.js');
 
 switch(process.argv[2]) {
@@ -24,6 +25,7 @@ switch(process.argv[2]) {
         break;
 }
 
+//Function for returning my tweets
 function myTweets() {
     var Twitter = require('twitter');
     var twitterKeys = keys.twitterKeys;
@@ -43,6 +45,7 @@ function myTweets() {
     });
 }
 
+//Parses tweets into something that looks nicer
 function sortTweets(inputArray) {
     var tweets = '';
     for (var i=0; i<Math.min(inputArray.length, 20); i++) {
@@ -51,6 +54,7 @@ function sortTweets(inputArray) {
     return tweets;
 }
 
+//Returns spotify information for song searched
 function spotifyThisSong(songName) {
     if (songName === '') {
         songName = 'The Sign, Ace of Base';
@@ -85,6 +89,7 @@ function spotifyThisSong(songName) {
     });
 }
 
+//Returns movie information for movie searched
 function movieThis(movieName) {
     var request = require('request');
     if (movieName === '') {
@@ -110,6 +115,7 @@ function movieThis(movieName) {
     });
 }
 
+//Finds the rating from the source (i.e. IMDB, Rotten Tomates, Metacritic, etc)
 function findRating(inputArray, source) {
     for (var i=0; i<inputArray.length; i++) {
         if (inputArray[i].Source == source) {
@@ -119,6 +125,7 @@ function findRating(inputArray, source) {
     return null;
 }
 
+//Function to do what a .txt file says, defaults to random.txt if none entered
 function doWhatItSays(inputFile) {
     if (inputFile === '') {
         inputFile = 'random.txt';
@@ -135,6 +142,7 @@ function doWhatItSays(inputFile) {
     });
 }
 
+//Handles the parameters from the .txt file
 function handle(inputArray) {
     switch(inputArray[0]) {
         case 'my-tweets':
@@ -151,6 +159,7 @@ function handle(inputArray) {
     }
 }
 
+//Logs everything and appends it to 'log.txt'
 function appendToFile(value) {
     var fs = require('fs');
     fs.appendFile('log.txt', '\n##########----------@@@@@@@@@@----------##########\n'
