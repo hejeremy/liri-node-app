@@ -40,7 +40,7 @@ function myTweets() {
 
 function spotifyThisSong(songName) {
     if (songName === '') {
-        songName = 'The Sign';
+        songName = 'The Sign, Ace of Base';
     }
     var Spotify = require('node-spotify-api');
     var spotifyKeys = require('./keys.js').spotifyKeys;
@@ -63,12 +63,12 @@ function spotifyThisSong(songName) {
             artistsList.push(artists[i].name);
         }
 
-        console.log(
-                'Artist(s): ' + artistsList.join(', ') + '\n'
-                + 'Song: ' + songInfo.name + '\n'
-                + 'Preview: ' + songInfo.preview_url + '\n'
-                + 'Album: ' + songInfo.album.name
-                );
+        var output = 'Artist(s): ' + artistsList.join(', ') + '\n'
+                                     + 'Song: ' + songInfo.name + '\n'
+                                     + 'Preview: ' + songInfo.preview_url + '\n'
+                                     + 'Album: ' + songInfo.album.name;
+        console.log(output);
+        appendToFile(output);
     });
 }
 
@@ -83,16 +83,16 @@ function movieThis(movieName) {
             var obj = JSON.parse(b);
             //console.log(obj);
 
-            console.log(
-                    'Title: ' + obj.Title + '\n'
-                    + 'Year: ' + obj.Year + '\n'
-                    + 'IMDB: ' + findRating(obj.Ratings, 'Internet Movie Database') + '\n'
-                    + 'Rotten Tomatoes: ' + findRating(obj.Ratings, 'Rotten Tomatoes') + '\n'
-                    + 'Country: ' + obj.Country + '\n'
-                    + 'Language: ' + obj.Language + '\n'
-                    + 'Plot: ' + obj.Plot + '\n'
-                    + 'Actors: ' + obj.Actors
-                    );
+            var output = 'Title: ' + obj.Title + '\n'
+                + 'Year: ' + obj.Year + '\n'
+                + 'IMDB: ' + findRating(obj.Ratings, 'Internet Movie Database') + '\n'
+                + 'Rotten Tomatoes: ' + findRating(obj.Ratings, 'Rotten Tomatoes') + '\n'
+                + 'Country: ' + obj.Country + '\n'
+                + 'Language: ' + obj.Language + '\n'
+                + 'Plot: ' + obj.Plot + '\n'
+                + 'Actors: ' + obj.Actors;
+            console.log(output);
+            appendToFile(output);
         }
     });
 }
@@ -136,4 +136,11 @@ function handle(inputArray) {
         default:
             break;
     }
+}
+
+function appendToFile(value) {
+    var fs = require('fs');
+    fs.appendFile('log.txt', '\n' + process.argv.join(' ') + '\n' + value + '\n', function(err) {
+        if (err) throw err;
+    });
 }

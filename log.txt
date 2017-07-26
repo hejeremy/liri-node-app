@@ -1,0 +1,26 @@
+
+/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js spotify-this-song
+Artist(s): Ace of Base
+Song: The Sign
+Preview: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=a816429c077d47fda5c7f1860e21e816
+Album: The Sign (US Album) [Remastered]
+
+/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js movie-this
+Title: Mr. Nobody
+Year: 2009
+IMDB: 7.9/10
+Rotten Tomatoes: 64%
+Country: Belgium, Germany, Canada, France, USA, UK
+Language: English, Mohawk
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+
+/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js movie-this moana
+Title: Moana
+Year: 2016
+IMDB: 7.7/10
+Rotten Tomatoes: 96%
+Country: USA
+Language: English
+Plot: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the Demigod to set things right.
+Actors: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison
