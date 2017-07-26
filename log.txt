@@ -1,121 +1,72 @@
 
 ##########----------@@@@@@@@@@----------##########
-/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js movie-this
-Title: Mr. Nobody
-Year: 2009
-IMDB: 7.9/10
-Rotten Tomatoes: 64%
-Country: Belgium, Germany, Canada, France, USA, UK
-Language: English, Mohawk
-Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
-Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
-
-##########----------@@@@@@@@@@----------##########
-/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js spotify-this-song
-Artist(s): Ace of Base
-Song: The Sign
-Preview: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=a816429c077d47fda5c7f1860e21e816
-Album: The Sign (US Album) [Remastered]
-
-##########----------@@@@@@@@@@----------##########
-/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js my-tweets
-@izs @mrhinkle @mikeal We are planning multiple translations the next go-to, having identified this shortcoming.
-Wed Jul 26 19:20:56 +0000 2017
-@LawrenceHecht yes, expect an infographic of sorts in September :) You can find exec summary here: https://t.co/69oIvketmL
-Wed Jul 26 16:15:25 +0000 2017
-RT @jasnell: Going to @NodeSummit today? I'll be showing off the latest code for the http/2 implementation in core this afternoon.
-Wed Jul 26 14:18:17 +0000 2017
-@Santhos73057252 please ask that question here: https://t.co/EUVUUa1VYb
-Wed Jul 26 13:44:03 +0000 2017
-🔥 off the press: What are the latest #nodejs usage patterns &amp; trends? Check out our 2017 user survey:… https://t.co/cLMTCsN63A
-Wed Jul 26 13:08:02 +0000 2017
-Node.js Board meeting should be live now here: https://t.co/RhLko6EVnT
-Tue Jul 25 22:17:31 +0000 2017
-The #nodejs Foundation board meeting will be live at around 6:00pm ET. We'll share the link once it's up here 😀
-Tue Jul 25 21:44:39 +0000 2017
-RT @dscape: At London @nodejs meetup! 
-
-Live stream on YouTube: https://t.co/3pxDk7bgF3?amp=1 https://t.co/Dcxu1acKo0
-Tue Jul 25 17:59:52 +0000 2017
-@KesariTours Please send your issue here: https://t.co/EUVUUa1VYb
-Tue Jul 25 16:03:35 +0000 2017
-RT @trott: Know Python and also love Node.js? There's a python label in the @nodejs issue tracker so you can find ways to help! https://t.c…
-Tue Jul 25 14:58:33 +0000 2017
-RT @YLDio: we'll stream #LNM #nodejs talks @claudiamatosa &amp; @rudids at @NewsUKTech live tonight 6:30pm BST 🙌 subscribe here: https://t.co/Q…
-Tue Jul 25 14:11:31 +0000 2017
-From @jasnell: Say hello to HTTP/2 for #nodejs core https://t.co/v8Y8EWku6N 👋
-Tue Jul 25 12:00:08 +0000 2017
-🎥New to #nodejs? Here are a few tips to remember when starting your project: https://t.co/jP3A1larc1 #nodehelp
-Mon Jul 24 20:31:01 +0000 2017
-RT @NodeSource: 📅 Discover what's new from the @nodejs working groups: 
-
-https://t.co/SrVlA5wBj7
-Mon Jul 24 18:43:03 +0000 2017
-RT @mhdawson1: Heading to @NodeSummit and interested in @nodejs benchmarking and performance ? Check out the benchmarking panel at 1:55 on…
-Mon Jul 24 15:04:15 +0000 2017
-✨Simple server side cache for #expressjs with #nodejs via @goenning https://t.co/nV1OvuGAdG 😀
-Mon Jul 24 15:00:07 +0000 2017
-The Art of Node.js from @denormalize provides a great intro to the platform. Read on here: https://t.co/GsKYnKYagL
-Fri Jul 21 19:30:02 +0000 2017
-Because Friday: Get caught up on Game of Thrones with this #chatbot supported by a #nodejs &amp; #mongoDB server https://t.co/1XQDRv9S7L
-Fri Jul 21 17:31:01 +0000 2017
-@domenic yes, it's a new use case.
-Fri Jul 21 17:07:20 +0000 2017
-Thinking about using Node.js? Here are 5 different ways that #nodejs builds out digital experiences… https://t.co/O39Zdgkwnm
-Fri Jul 21 13:00:12 +0000 2017
-
-
-##########----------@@@@@@@@@@----------##########
-/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js my-tweets
-@izs @mrhinkle @mikeal We are planning multiple translations the next go-to, having identified this shortcoming.
-Wed Jul 26 19:20:56 +0000 2017
-@LawrenceHecht yes, expect an infographic of sorts in September :) You can find exec summary here: https://t.co/69oIvketmL
-Wed Jul 26 16:15:25 +0000 2017
-RT @jasnell: Going to @NodeSummit today? I'll be showing off the latest code for the http/2 implementation in core this afternoon.
-Wed Jul 26 14:18:17 +0000 2017
-@Santhos73057252 please ask that question here: https://t.co/EUVUUa1VYb
-Wed Jul 26 13:44:03 +0000 2017
-🔥 off the press: What are the latest #nodejs usage patterns &amp; trends? Check out our 2017 user survey:… https://t.co/cLMTCsN63A
-Wed Jul 26 13:08:02 +0000 2017
-Node.js Board meeting should be live now here: https://t.co/RhLko6EVnT
-Tue Jul 25 22:17:31 +0000 2017
-The #nodejs Foundation board meeting will be live at around 6:00pm ET. We'll share the link once it's up here 😀
-Tue Jul 25 21:44:39 +0000 2017
-RT @dscape: At London @nodejs meetup! 
-
-Live stream on YouTube: https://t.co/3pxDk7bgF3?amp=1 https://t.co/Dcxu1acKo0
-Tue Jul 25 17:59:52 +0000 2017
-@KesariTours Please send your issue here: https://t.co/EUVUUa1VYb
-Tue Jul 25 16:03:35 +0000 2017
-RT @trott: Know Python and also love Node.js? There's a python label in the @nodejs issue tracker so you can find ways to help! https://t.c…
-Tue Jul 25 14:58:33 +0000 2017
-RT @YLDio: we'll stream #LNM #nodejs talks @claudiamatosa &amp; @rudids at @NewsUKTech live tonight 6:30pm BST 🙌 subscribe here: https://t.co/Q…
-Tue Jul 25 14:11:31 +0000 2017
-From @jasnell: Say hello to HTTP/2 for #nodejs core https://t.co/v8Y8EWku6N 👋
-Tue Jul 25 12:00:08 +0000 2017
-🎥New to #nodejs? Here are a few tips to remember when starting your project: https://t.co/jP3A1larc1 #nodehelp
-Mon Jul 24 20:31:01 +0000 2017
-RT @NodeSource: 📅 Discover what's new from the @nodejs working groups: 
-
-https://t.co/SrVlA5wBj7
-Mon Jul 24 18:43:03 +0000 2017
-RT @mhdawson1: Heading to @NodeSummit and interested in @nodejs benchmarking and performance ? Check out the benchmarking panel at 1:55 on…
-Mon Jul 24 15:04:15 +0000 2017
-✨Simple server side cache for #expressjs with #nodejs via @goenning https://t.co/nV1OvuGAdG 😀
-Mon Jul 24 15:00:07 +0000 2017
-The Art of Node.js from @denormalize provides a great intro to the platform. Read on here: https://t.co/GsKYnKYagL
-Fri Jul 21 19:30:02 +0000 2017
-Because Friday: Get caught up on Game of Thrones with this #chatbot supported by a #nodejs &amp; #mongoDB server https://t.co/1XQDRv9S7L
-Fri Jul 21 17:31:01 +0000 2017
-@domenic yes, it's a new use case.
-Fri Jul 21 17:07:20 +0000 2017
-Thinking about using Node.js? Here are 5 different ways that #nodejs builds out digital experiences… https://t.co/O39Zdgkwnm
-Fri Jul 21 13:00:12 +0000 2017
-
-
-##########----------@@@@@@@@@@----------##########
 /usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js spotify-this-song abyss
 Artist(s): Slayer
 Song: Seasons In The Abyss
 Preview: null
 Album: Seasons In The Abyss
+
+
+##########----------@@@@@@@@@@----------##########
+/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js my-tweets
+Tweet #21
+Wed Jul 26 20:07:52 +0000 2017
+Tweet #20
+Wed Jul 26 20:07:48 +0000 2017
+Tweet #19
+Wed Jul 26 20:07:44 +0000 2017
+Tweet #18
+Wed Jul 26 20:07:40 +0000 2017
+Tweet #17
+Wed Jul 26 20:07:36 +0000 2017
+Tweet #16
+Wed Jul 26 20:07:33 +0000 2017
+Tweet #15
+Wed Jul 26 20:07:29 +0000 2017
+Tweet #14
+Wed Jul 26 20:07:25 +0000 2017
+Tweet #13
+Wed Jul 26 20:07:22 +0000 2017
+Tweet #12
+Wed Jul 26 20:07:02 +0000 2017
+Tweet #11
+Wed Jul 26 20:06:57 +0000 2017
+Tweet #10
+Wed Jul 26 20:06:53 +0000 2017
+Tweet #9
+Wed Jul 26 20:06:49 +0000 2017
+Tweet #8
+Wed Jul 26 20:06:45 +0000 2017
+Tweet #7
+Wed Jul 26 20:06:39 +0000 2017
+Tweet #6
+Wed Jul 26 20:06:35 +0000 2017
+Tweet #5
+Wed Jul 26 20:06:31 +0000 2017
+Tweet #4
+Wed Jul 26 20:06:27 +0000 2017
+Tweet #3
+Wed Jul 26 20:06:24 +0000 2017
+Tweet #2
+Wed Jul 26 20:06:20 +0000 2017
+
+
+##########----------@@@@@@@@@@----------##########
+/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js movie-this moana
+Title: Moana
+Year: 2016
+IMDB: 7.7/10
+Rotten Tomatoes: 96%
+Country: USA
+Language: English
+Plot: In Ancient Polynesia, when a terrible curse incurred by the Demigod Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the Demigod to set things right.
+Actors: Auli'i Cravalho, Dwayne Johnson, Rachel House, Temuera Morrison
+
+
+##########----------@@@@@@@@@@----------##########
+/usr/local/Cellar/node/7.10.0/bin/node /Users/jeremyhe/Documents/Bootcamp/Homework/liri-node-app/liri.js do-what-it-says
+Artist(s): Backstreet Boys
+Song: I Want It That Way
+Preview: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=a816429c077d47fda5c7f1860e21e816
+Album: The Hits--Chapter One
+

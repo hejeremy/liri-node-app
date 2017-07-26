@@ -30,7 +30,8 @@ function myTweets() {
 
     var client = new Twitter(twitterKeys);
 
-    var params = {screen_name: 'nodejs'};
+    //var params = {screen_name: 'nodejs'};
+    var params = {user_id: '890249949929144320'};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (error) {
             return console.log(error);
@@ -78,7 +79,7 @@ function spotifyThisSong(songName) {
         var output = 'Artist(s): ' + artistsList.join(', ') + '\n'
                                      + 'Song: ' + songInfo.name + '\n'
                                      + 'Preview: ' + songInfo.preview_url + '\n'
-                                     + 'Album: ' + songInfo.album.name;
+                                     + 'Album: ' + songInfo.album.name + '\n';
         console.log(output);
         appendToFile(output);
     });
@@ -102,7 +103,7 @@ function movieThis(movieName) {
                 + 'Country: ' + obj.Country + '\n'
                 + 'Language: ' + obj.Language + '\n'
                 + 'Plot: ' + obj.Plot + '\n'
-                + 'Actors: ' + obj.Actors;
+                + 'Actors: ' + obj.Actors + '\n';
             console.log(output);
             appendToFile(output);
         }
