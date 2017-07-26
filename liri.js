@@ -15,6 +15,9 @@ switch(process.argv[2]) {
     case 'movie-this':
         movieThis(process.argv.slice(3).join(' '));
         break;
+    case 'do-what-it-says':
+        doWhatItSays(process.argv.slice(3).join(' '));
+        break;
     default:
         break;
 }
@@ -37,9 +40,8 @@ function myTweets() {
 
 function spotifyThisSong(songName) {
     if (songName === '') {
-        songName = 'All the Small Things';
+        songName = 'The Sign';
     }
-    console.log(songName);
     var Spotify = require('node-spotify-api');
     var spotifyKeys = require('./keys.js').spotifyKeys;
 
@@ -53,7 +55,20 @@ function spotifyThisSong(songName) {
             return console.log('Error occurred: ' + err);
         }
 
-        console.log(data.tracks.items[0]);
+        var songInfo = data.tracks.items[0];
+
+        var artists = songInfo.album.artists;
+        var artistsList = [];
+        for (var i=0; i<artists.length; i++) {
+            artistsList.push(artists[i].name);
+        }
+
+        console.log(
+                'Artist(s): ' + artistsList.join(', ') + '\n'
+                + 'Song: ' + songInfo.name + '\n'
+                + 'Preview: ' + songInfo.preview_url + '\n'
+                + 'Album: ' + songInfo.album.name
+                );
     });
 }
 
@@ -66,10 +81,59 @@ function movieThis(movieName) {
     request(queryUrl, function(err, r, b) {
         if (!err && r.statusCode === 200) {
             var obj = JSON.parse(b);
-            console.log(obj);
+            //console.log(obj);
+
+            console.log(
+                    'Title: ' + obj.Title + '\n'
+                    + 'Year: ' + obj.Year + '\n'
+                    + 'IMDB: ' + findRating(obj.Ratings, 'Internet Movie Database') + '\n'
+                    + 'Rotten Tomatoes: ' + findRating(obj.Ratings, 'Rotten Tomatoes') + '\n'
+                    + 'Country: ' + obj.Country + '\n'
+                    + 'Language: ' + obj.Language + '\n'
+                    + 'Plot: ' + obj.Plot + '\n'
+                    + 'Actors: ' + obj.Actors
+                    );
         }
     });
 }
 
-function doWhatItSays(inputString) {
+function findRating(inputArray, source) {
+    for (var i=0; i<inputArray.length; i++) {
+        if (inputArray[i].Source == source) {
+            return inputArray[i].Value;
+        }
+    }
+    return null;
+}
+
+function doWhatItSays(inputFile) {
+    if (inputFile === '') {
+        inputFile = 'random.txt';
+    }
+    var fs = require('fs');
+
+    fs.readFile(inputFile, 'utf8', function(err,data) {
+        if (err) {
+            console.log(err);
+        }
+
+        var command = data.split(',');
+        handle(command);
+    });
+}
+
+function handle(inputArray) {
+    switch(inputArray[0]) {
+        case 'my-tweets':
+            myTweets();
+            break;
+        case 'spotify-this-song':
+            spotifyThisSong(inputArray.slice(1).join(' '));
+            break;
+        case 'movie-this':
+            movieThis(inputArray.slice(1).join(' '));
+            break;
+        default:
+            break;
+    }
 }
