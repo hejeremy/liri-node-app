@@ -5,6 +5,8 @@
  * Last Edited: 7-26-2017
  */
 
+var keys = require('./keys.js');
+
 switch(process.argv[2]) {
     case 'my-tweets':
         myTweets();
@@ -24,7 +26,7 @@ switch(process.argv[2]) {
 
 function myTweets() {
     var Twitter = require('twitter');
-    var twitterKeys = require('./keys.js').twitterKeys;
+    var twitterKeys = keys.twitterKeys;
 
     var client = new Twitter(twitterKeys);
 
@@ -53,7 +55,7 @@ function spotifyThisSong(songName) {
         songName = 'The Sign, Ace of Base';
     }
     var Spotify = require('node-spotify-api');
-    var spotifyKeys = require('./keys.js').spotifyKeys;
+    var spotifyKeys = keys.spotifyKeys;
 
     var spotify = new Spotify(spotifyKeys);
 
