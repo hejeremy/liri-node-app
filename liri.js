@@ -34,8 +34,18 @@ function myTweets() {
             return console.log(error);
         }
 
-        console.log(tweets);
+        var output = sortTweets(tweets);
+        console.log(output);
+        appendToFile(output);
     });
+}
+
+function sortTweets(inputArray) {
+    var tweets = '';
+    for (var i=0; i<Math.min(inputArray.length, 20); i++) {
+        tweets += inputArray[i].text + '\n' + inputArray[i].created_at + '\n';
+    }
+    return tweets;
 }
 
 function spotifyThisSong(songName) {
@@ -140,7 +150,9 @@ function handle(inputArray) {
 
 function appendToFile(value) {
     var fs = require('fs');
-    fs.appendFile('log.txt', '\n' + process.argv.join(' ') + '\n' + value + '\n', function(err) {
+    fs.appendFile('log.txt', '\n##########----------@@@@@@@@@@----------##########\n'
+            + process.argv.join(' ') + '\n'
+            + value + '\n', function(err) {
         if (err) throw err;
     });
 }
