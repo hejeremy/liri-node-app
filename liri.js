@@ -6,7 +6,7 @@
  */
 
 //Grabs keys from keys.js
-var keys = require('./keys.js');
+const keys = require('./keys.js');
 
 switch(process.argv[2]) {
     case 'my-tweets':
@@ -27,19 +27,18 @@ switch(process.argv[2]) {
 
 //Function for returning my tweets
 function myTweets() {
-    var Twitter = require('twitter');
-    var twitterKeys = keys.twitterKeys;
+    const Twitter = require('twitter');
+    const twitterKeys = keys.twitterKeys;
 
-    var client = new Twitter(twitterKeys);
+    const client = new Twitter(twitterKeys);
 
-    //var params = {screen_name: 'nodejs'};
-    var params = {user_id: '890249949929144320'};
+    const params = {user_id: '890249949929144320'};
     client.get('statuses/user_timeline', params, function(error, tweets, response) {
         if (error) {
             return console.log(error);
         }
 
-        var output = sortTweets(tweets);
+        const output = sortTweets(tweets);
         console.log(output);
         appendToFile(output);
     });
@@ -47,8 +46,8 @@ function myTweets() {
 
 //Parses tweets into something that looks nicer
 function sortTweets(inputArray) {
-    var tweets = '';
-    for (var i=0; i<Math.min(inputArray.length, 20); i++) {
+    let tweets = '';
+    for (let i=0; i<Math.min(inputArray.length, 20); i++) {
         tweets += inputArray[i].text + '\n' + inputArray[i].created_at + '\n';
     }
     return tweets;
@@ -59,10 +58,10 @@ function spotifyThisSong(songName) {
     if (songName === '') {
         songName = 'The Sign, Ace of Base';
     }
-    var Spotify = require('node-spotify-api');
-    var spotifyKeys = keys.spotifyKeys;
+    const Spotify = require('node-spotify-api');
+    const spotifyKeys = keys.spotifyKeys;
 
-    var spotify = new Spotify(spotifyKeys);
+    const spotify = new Spotify(spotifyKeys);
 
     spotify.search({
         type: 'track',
@@ -72,15 +71,15 @@ function spotifyThisSong(songName) {
             return console.log('Error occurred: ' + err);
         }
 
-        var songInfo = data.tracks.items[0];
+        const songInfo = data.tracks.items[0];
 
-        var artists = songInfo.album.artists;
-        var artistsList = [];
-        for (var i=0; i<artists.length; i++) {
+        const artists = songInfo.album.artists;
+        let artistsList = [];
+        for (let i=0; i<artists.length; i++) {
             artistsList.push(artists[i].name);
         }
 
-        var output = 'Artist(s): ' + artistsList.join(', ') + '\n'
+        const output = 'Artist(s): ' + artistsList.join(', ') + '\n'
                                      + 'Song: ' + songInfo.name + '\n'
                                      + 'Preview: ' + songInfo.preview_url + '\n'
                                      + 'Album: ' + songInfo.album.name + '\n';
@@ -91,17 +90,17 @@ function spotifyThisSong(songName) {
 
 //Returns movie information for movie searched
 function movieThis(movieName) {
-    var request = require('request');
+    const request = require('request');
     if (movieName === '') {
         movieName = 'Mr. Nobody';
     }
-    var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=40e9cece";
+    const queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=40e9cece";
     request(queryUrl, function(err, r, b) {
         if (!err && r.statusCode === 200) {
-            var obj = JSON.parse(b);
+            const obj = JSON.parse(b);
             //console.log(obj);
 
-            var output = 'Title: ' + obj.Title + '\n'
+            const output = 'Title: ' + obj.Title + '\n'
                 + 'Year: ' + obj.Year + '\n'
                 + 'IMDB: ' + findRating(obj.Ratings, 'Internet Movie Database') + '\n'
                 + 'Rotten Tomatoes: ' + findRating(obj.Ratings, 'Rotten Tomatoes') + '\n'
@@ -117,7 +116,7 @@ function movieThis(movieName) {
 
 //Finds the rating from the source (i.e. IMDB, Rotten Tomates, Metacritic, etc)
 function findRating(inputArray, source) {
-    for (var i=0; i<inputArray.length; i++) {
+    for (let i=0; i<inputArray.length; i++) {
         if (inputArray[i].Source == source) {
             return inputArray[i].Value;
         }
@@ -130,14 +129,14 @@ function doWhatItSays(inputFile) {
     if (inputFile === '') {
         inputFile = 'random.txt';
     }
-    var fs = require('fs');
+    const fs = require('fs');
 
     fs.readFile(inputFile, 'utf8', function(err,data) {
         if (err) {
             console.log(err);
         }
 
-        var command = data.split(',');
+        const command = data.split(',');
         handle(command);
     });
 }
@@ -161,7 +160,7 @@ function handle(inputArray) {
 
 //Logs everything and appends it to 'log.txt'
 function appendToFile(value) {
-    var fs = require('fs');
+    const fs = require('fs');
     fs.appendFile('log.txt', '\n##########----------@@@@@@@@@@----------##########\n'
             + process.argv.join(' ') + '\n'
             + value + '\n', function(err) {
